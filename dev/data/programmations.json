@@ -1,0 +1,44 @@
+{
+    "current": {
+        "1": {
+            "startTime": "2023-08-12T11:00:00.000Z",
+            "endTime": "2023-08-12T11:45:00.000Z",
+            "artist": "charlesbradley",
+            "stage": "main"
+        },
+        "2": {
+            "startTime": "2023-08-12T12:15:00.000Z",
+            "endTime": "2023-08-12T13:00:00.000Z",
+            "artist": "dangelo",
+            "stage": "main"
+        },
+        "3": {
+            "startTime": "2023-08-12T13:30:00.000Z",
+            "endTime": "2023-08-12T14:15:00.000Z",
+            "artist": "tommisch",
+            "stage": "alternative"
+        },
+        "4": {
+            "startTime": "2023-08-12T14:45:00.000Z",
+            "endTime": "2023-08-12T15:30:00.000Z",
+            "artist": "erykahbadu",
+            "stage": "alternative"
+        },
+        "5": {
+            "startTime": "2023-08-12T16:00:00.000Z",
+            "endTime": "2023-08-12T16:45:00.000Z",
+            "artist": "jordanrakei",
+            "stage": "emergent"
+        },
+        "6": {
+            "startTime": "2023-08-12T16:00:00.000Z",
+            "endTime": "2023-08-12T16:45:00.000Z",
+            "artist": "hiatuskaiyote",
+            "stage": "emergent"
+        }
+    },
+    "previous": {
+        "2022": {},
+        "2021": {}
+    }
+}

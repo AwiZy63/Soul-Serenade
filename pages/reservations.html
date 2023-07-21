@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__socials">
+            <a href="#" class="header__social"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#" class="header__social"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="header__social"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#" class="header__social"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="header__brands">
+            <h1 class="header__brands__title">Soul-Serenade</h1>
+            <h2 class="header__brands__subtitle">12 Août & 13 Août 2023 • Simcity • Kekpar</h2>
+        </div>
+        <div class="header__translations">
+            <button class="header__translation header__translation--active">Fr</button>
+            <button class="header__translation">En</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="navbar__header">
+            <p class="navbar__header__title">Navigation</p>
+            <div class="navbar__header__links">
+                <a class="navbar__header__link" href="./index.html">Accueil</a>
+                <a class="navbar__header__link" href="./programmation.html">Programme</a>
+                <a class="navbar__header__link navbar__content__link--active"
+                    href="./reservations.html">Réservations</a>
+                <a class="navbar__header__link" href="./contact.html">Contact</a>
+            </div>
+            <button class="navbar__header__collapse-button"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <div class="navbar__content">
+            <div class="navbar__content__links">
+                <a class="navbar__content__link" href="./index.html">Accueil</a>
+                <a class="navbar__content__link" href="./programmation.html">Programme</a>
+                <a class="navbar__content__link navbar__content__link--active"
+                    href="./reservations.html">Réservations</a>
+                <a class="navbar__content__link" href="./contact.html">Contact</a>
+            </div>
+            <div class="navbar__content__footer">
+                <div class="navbar__content__footer__socials">
+                    <a class="navbar__content__footer__social" href="#" target="_blank"><i
+                            class="fa-brands fa-square-facebook"></i></a>
+                    <a class="navbar__content__footer__social" href="https://www.instagram.com/soulserenadefestival/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a class="navbar__content__footer__social" href="#" target="_blank"><i
+                            class="fa-brands fa-square-twitter"></i></a>
+                    <a class="navbar__content__footer__social" href="#" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="navbar__content__footer__translations">
+                    <button
+                        class="navbar__content__footer__translation navbar__content__footer__translation--active">Fr</button>
+                    <button class="navbar__content__footer__translation">En</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content reservations">
+        <section class="reservations__section">
+            <h3 class="reservations__section__title">Billets Jour</h3>
+            <div class="reservations__informations__body senary-border-color">
+                <div class="reservations__informations__row">
+                    <p>Samedi 12 Août</p>
+                    <p>69€</p>
+                    <button class="reservations__informations__row__button">Réserver</button>
+                </div>
+
+                <div class="reservations__informations__row">
+                    <p>Dimanche 13 Août</p>
+                    <p>65€</p>
+                    <button id="dailyTicket"
+                        class="reservations__informations__row__button reservations__informations__row__button--outofstock">Épuisé</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="reservations__section">
+            <h3 class="reservations__section__title">Pass 2 jours</h3>
+            <div class="reservations__informations__body tertiary-border-color">
+                <div class="reservations__informations__row">
+                    <p>Pass 2 jours (12 Août & 13 Août)</p>
+                    <p>115€</p>
+                    <button id="passTicket" class="reservations__informations__row__button">Réserver</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="reservations__section">
+            <h3 class="reservations__section__title">Billets VIP</h3>
+            <div class="reservations__informations__body primary-border-color">
+                <div class="reservations__informations__row">
+                    <p>Samedi 12 Août</p>
+                    <p>250€</p>
+                    <button class="reservations__informations__row__button">Réserver</button>
+                </div>
+
+                <div class="reservations__informations__row">
+                    <p>Dimanche 13 Août</p>
+                    <p>220€</p>
+                    <button id="vipTicket"
+                        class="reservations__informations__row__button reservations__informations__row__button--outofstock">Épuisé</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="reservations__modal">
+        <div class="reservations__modal__content">
+            <header class="reservations__modal__content__header">
+                <button class="reservations__modal__content__header__close-button"><i
+                        class="fa-solid fa-xmark"></i></i></button>
+                <h3 class="reservations__modal__content__header__title">Soul-Serenade</h3>
+                <h4 class="reservations__modal__content__header__details">Réservation : billet jour, 12 Août</h4>
+            </header>
+            <form class="reservations__modal__content__form form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reservationLastName">Nom</label>
+                        <input type="text" name="lastName" id="reservationLastName" placeholder="Entrez votre nom...">
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationFirstName">Prénom</label>
+                        <input type="text" name="firstName" id="reservationFirstName"
+                            placeholder="Entrez votre prénom...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reservationEmail">Adresse mail</label>
+                        <input type="text" name="email" id="reservationEmail" placeholder="Entrez votre e-mail...">
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationPhone">Téléphone</label>
+                        <input type="text" name="phone" id="reservationPhone" placeholder="Entrez votre téléphone...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postalAddress">Adresse postale</label>
+                        <input type="text" name="postalAddress" id="postalAddress"
+                            placeholder="Entrez votre adresse postale...">
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode">Code postal</label>
+                        <input type="text" name="postalCode" id="postalCode" placeholder="Entrez votre code postal...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Ville</label>
+                        <input type="text" name="city" id="city" placeholder="Entrez votre ville...">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Pays</label>
+                        <select name="country" id="country">
+                            <option value="france">France</option>
+                            <option value="belgique">Belgique</option>
+                            <option value="suisse">Suisse</option>
+                            <option value="luxembourg">Luxembourg</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reservationQuantity">Quantité</label>
+                        <select name="reservationQuantity" id="reservationQuantity">
+                            <option value="1">1 billet</option>
+                            <option value="2">2 billets</option>
+                            <option value="3">3 billets</option>
+                            <option value="4">4 billets</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label id="bookingSubmitButtonLabel" for="bookingSubmitButton">&amp;</label>
+                        <button id="bookingSubmitButton" type="submit">Réserver</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <section class="instagram-embed">
+        <header class="instagram-embed__header">
+            <h3 class="instagram-embed__header__title">Instagram</h3>
+        </header>
+        <main class="instagram-embed__body">
+            <div id="instagramCarouselContainer" class="instagram-embed__body__carousel">
+                <img src="./assets/img/template.avif" alt="#">
+                <img src="./assets/img/template.avif" alt="#">
+                <img src="./assets/img/template.avif" alt="#">
+                <img src="./assets/img/template.avif" alt="#">
+                <img src="./assets/img/template.avif" alt="#">
+            </div>
+        </main>
+        <footer class="instagram-embed__footer">
+            <a class="instagram-embed__footer__link" href="https://www.instagram.com/soulserenadefestival/"><i class="fa-brands fa-instagram"></i> Suivez sur
+                Instagram</a>
+        </footer>
+    </section>
+    <footer class="footer">
+        <div class="footer__separator"></div>
+        <div class="footer__content">
+            <div class="footer__content__container">
+
+                <nav class="footer__content__nav">
+                    <a class="footer__content__nav__link" href="./index.html">Accueil</a>
+                    <a class="footer__content__nav__link" href="./programmation.html">Programme</a>
+                    <a class="footer__content__nav__link footer__content__nav__link--active"
+                        href="./reservations.html">Réservations</a>
+                    <a class="footer__content__nav__link" href="./contact.html">Contact</a>
+                </nav>
+                <div class="footer__content__socials">
+                    <a class="footer__content__social" href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a class="footer__content__social" href="https://www.instagram.com/soulserenadefestival/"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="footer__content__social" href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a class="footer__content__social" href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="footer__content__copyrights">
+                    <span class="footer__content__copyrights__separator"></span>
+                    <p class="footer__content__copyrights__text">
+                        &copy; <span id="currentYear">XXXX</span> Soul-Serenade Festival. Tous droits réservés.
+                        <br>
+                        Contact : <a href="mailto://contact@soul-serenade.fr">contact@soul-serenade.fr</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="./assets/js/navbar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/carousel.js"></script>
+    <script src="./assets/js/reservations.js"></script>
+
+</body>
+
+</html>

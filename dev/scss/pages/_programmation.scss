@@ -1,0 +1,234 @@
+.programmation {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+            url("../../assets/img/programmation-banner.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 56px 20px;
+        border: 10px solid black;
+        position: relative;
+        &__title {
+            font-family: $primary-font;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-s-title;
+            color: $octonary-color;
+
+            @media screen and (min-width: 768px) {
+                font-size: $font-size-title;
+            }
+        }
+        &__action-buttons {
+            position: absolute;
+            top: 100%;
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-30%);
+            @media screen and (min-width: 768px) {
+                transform: translateY(-40%);
+            }
+        }
+        &__action-button {
+            background-color: $nonary-color;
+            color: $octonary-color;
+            font-family: $tertiary-font;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-x-small;
+            text-transform: uppercase;
+            padding: 2px 2px;
+            height: fit-content;
+            border: none;
+            cursor: pointer;
+            transition: all 0.05s ease-in-out;
+            filter: brightness(1);
+
+            @media screen and (min-width: 420px) {
+                padding: 4px;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: $font-size-small;
+                padding: 8px 12px;
+            }
+
+            &:hover {
+                transition: all 0.05s ease-in-out;
+                filter: brightness(1.2);
+            }
+            &--active {
+                padding: 6px;
+                background: $gradient-color;
+                
+                @media screen and (min-width: 420px) {
+                    padding: 8px;
+                }
+                @media screen and (min-width: 768px) {
+                    padding: 12px 12px;
+                }
+                &:hover {
+                    transition: all 0.05s ease-in-out;
+                    filter: brightness(1.2);
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        @media screen and (min-width: 612px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &__artiste-card {
+            width: 100%;
+            height: 200px;
+            background-color: black;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            transition: scale 0.2s ease-in-out;
+
+            &:hover {
+                transition: scale 0.2s ease-in-out;
+                scale: 1.05;
+            }
+            &::before {
+                content: attr(data-date);
+                position: absolute;
+                background-color: $octonary-color;
+                font-family: $quinary-font;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-x-small;
+                color: $nonary-color;
+                padding: 4px 8px;
+                text-transform: uppercase;
+                bottom: 0;
+                left: 20px;
+                transform: translateY(-60%);
+                
+                @media screen and (min-width: 768px) {
+                    font-size: $font-size-small;
+                }
+            }
+            &::after {
+                content: attr(data-name);
+                background-color: $primary-color;
+                position: absolute;
+                top: 100%;
+                padding: 4px 12px;
+                left: 10px;
+                color: $octonary-color;
+                font-family: $quinary-font;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-normal;
+                transform: translateY(-50%);
+                min-width: 100px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: $font-size-x-large;
+                    min-width: 130px;
+                }
+            }
+
+            // le premier element on met le background en bleu, le deuxieme en rose, le troisieme en vert, et on revient au debut
+
+            &:nth-child(4n + 1) {
+                &::after {
+                    background-color: $secondary-color;
+                }
+            }
+
+            &:nth-child(4n + 2) {
+                &::after {
+                    background-color: $primary-color;
+                }
+            }
+
+            &:nth-child(4n + 3) {
+                &::after {
+                    background-color: $senary-color;
+                }
+            }
+
+            &:nth-child(4n + 4) {
+                &::after {
+                    background-color: $quinary-color;
+                }
+            }
+        }
+    }
+
+    &__link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: $quinary-font;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-x-large;
+        padding: 10px 20px;
+        border: 10px solid black;
+        text-decoration: none;
+        color: $nonary-color;
+        position: relative;
+        text-align: right;
+        max-width: 420px;
+
+        &::after {
+            content: "<-";
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            color: $nonary-color;
+            font-size: $font-size-s-title;
+            transform: translateY(-50%);
+        }
+        &:hover {
+            &::after {
+                animation: bounce 0.75s linear infinite;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: inline-flex;
+            font-size: calc($font-size-x-large + 2px);
+        }
+    }
+
+    &__category {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__title {
+            font-family: $primary-font;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-x-large;
+            color: $nonary-color;
+
+            @media screen and (min-width: 768px) {
+                font-size: $font-size-s-title;
+            }
+        }
+    }
+}

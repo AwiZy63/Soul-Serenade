@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main class="main-content reservations">
+        <section class="reservations__section">
+            <h3 class="reservations__section__title">Billets Jour</h3>
+            <div class="reservations__informations__body senary-border-color">
+                <div class="reservations__informations__row">
+                    <p>Samedi 12 Août</p>
+                    <p>69€</p>
+                    <button class="reservations__informations__row__button">Réserver</button>
+                </div>
+
+                <div class="reservations__informations__row">
+                    <p>Dimanche 13 Août</p>
+                    <p>65€</p>
+                    <button id="dailyTicket"
+                        class="reservations__informations__row__button reservations__informations__row__button--outofstock">Épuisé</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="reservations__section">
+            <h3 class="reservations__section__title">Pass 2 jours</h3>
+            <div class="reservations__informations__body tertiary-border-color">
+                <div class="reservations__informations__row">
+                    <p>Pass 2 jours (12 Août & 13 Août)</p>
+                    <p>115€</p>
+                    <button id="passTicket" class="reservations__informations__row__button">Réserver</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="reservations__section">
+            <h3 class="reservations__section__title">Billets VIP</h3>
+            <div class="reservations__informations__body primary-border-color">
+                <div class="reservations__informations__row">
+                    <p>Samedi 12 Août</p>
+                    <p>250€</p>
+                    <button class="reservations__informations__row__button">Réserver</button>
+                </div>
+
+                <div class="reservations__informations__row">
+                    <p>Dimanche 13 Août</p>
+                    <p>220€</p>
+                    <button id="vipTicket"
+                        class="reservations__informations__row__button reservations__informations__row__button--outofstock">Épuisé</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="reservations__modal">
+        <div class="reservations__modal__content">
+            <header class="reservations__modal__content__header">
+                <button class="reservations__modal__content__header__close-button"><i
+                        class="fa-solid fa-xmark"></i></i></button>
+                <h3 class="reservations__modal__content__header__title">Soul-Serenade</h3>
+                <h4 class="reservations__modal__content__header__details">Réservation : billet jour, 12 Août</h4>
+            </header>
+            <form class="reservations__modal__content__form form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reservationLastName">Nom</label>
+                        <input type="text" name="lastName" id="reservationLastName" placeholder="Entrez votre nom...">
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationFirstName">Prénom</label>
+                        <input type="text" name="firstName" id="reservationFirstName"
+                            placeholder="Entrez votre prénom...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reservationEmail">Adresse mail</label>
+                        <input type="text" name="email" id="reservationEmail" placeholder="Entrez votre e-mail...">
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationPhone">Téléphone</label>
+                        <input type="text" name="phone" id="reservationPhone" placeholder="Entrez votre téléphone...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postalAddress">Adresse postale</label>
+                        <input type="text" name="postalAddress" id="postalAddress"
+                            placeholder="Entrez votre adresse postale...">
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode">Code postal</label>
+                        <input type="text" name="postalCode" id="postalCode" placeholder="Entrez votre code postal...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Ville</label>
+                        <input type="text" name="city" id="city" placeholder="Entrez votre ville...">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Pays</label>
+                        <select name="country" id="country">
+                            <option value="france">France</option>
+                            <option value="belgique">Belgique</option>
+                            <option value="suisse">Suisse</option>
+                            <option value="luxembourg">Luxembourg</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reservationQuantity">Quantité</label>
+                        <select name="reservationQuantity" id="reservationQuantity">
+                            <option value="1">1 billet</option>
+                            <option value="2">2 billets</option>
+                            <option value="3">3 billets</option>
+                            <option value="4">4 billets</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label id="bookingSubmitButtonLabel" for="bookingSubmitButton">&amp;</label>
+                        <button id="bookingSubmitButton" type="submit">Réserver</button>
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        const modal = document.querySelector('.reservations__modal');
+        const modalCloseButton = document.querySelector('.reservations__modal__content__header__close-button');
+        const modalContentDetails = document.querySelector('.reservations__modal__content__header__details');
+
+        const billingButtons = document.querySelectorAll('.reservations__informations__row__button');
+
+        billingButtons.forEach((button) => {
+            if (!button.classList.contains('reservations__informations__row__button--outofstock')) {
+                button.addEventListener('click', () => {
+                    modal.classList.add('reservations__modal--active');
+                    modalContentDetails.textContent = `Réservation : ${button.parentElement.parentElement.parentElement.children[0].textContent.includes("VIP") ? button.parentElement.children[0].textContent + " (VIP)" : button.parentElement.children[0].textContent}, ${button.parentElement.children[1].textContent}`;
+                })
+            }
+        })
+
+        modalCloseButton.addEventListener('click', () => {
+            modal.classList.remove('reservations__modal--active');
+        })
+
+        const billingForm = document.querySelector('.reservations__modal__content__form');
+
+        billingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(billingForm);
+
+            const data = {
+                lastName: formData.get('lastName'),
+                firstName: formData.get('firstName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                postalAddress: formData.get('postalAddress'),
+                postalCode: formData.get('postalCode'),
+                city: formData.get('city'),
+                country: formData.get('country'),
+                quantity: formData.get('reservationQuantity'),
+            }
+
+            for (const [key, value] of Object.entries(data)) {
+                if (value === '') {
+                    alert('Veuillez remplir tous les champs du formulaire');
+                    return;
+                }
+            }
+
+            
+            billingForm.reset();
+            modal.classList.remove('reservations__modal--active');
+            alert('Votre réservation a bien été prise en compte !');
+        })
+    </script>
+</body>
+
+</html>

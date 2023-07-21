@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="main-content programmation">
+        <header class="programmation__header secondary-border-color">
+            <h3 class="programmation__header__title">Programmation</h3>
+            <div class="programmation__header__action-buttons">
+                <button class="programmation__header__action-button programmation__header__action-button--active">Tout afficher</button>
+                <button class="programmation__header__action-button">2022</button>
+                <button class="programmation__header__action-button">2021</button>
+            </div>
+        </header>
+
+        <section class="programmation__category">
+            <h3 class="programmation__category__title">Programmation 2022</h3>
+
+            <div class="programmation__content">
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+        </section>
+
+        <section class="programmation__category">
+            <h3 class="programmation__category__title">Programmation 2021</h3>
+
+            <div class="programmation__content">
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+                <a href="artiste.html?id=12" data-name="Charles Bradley" data-date="Samedi 12 Août"
+                    class="programmation__content__artiste-card">
+                    <img src="./assets/img/template.avif" alt="#">
+                </a>
+        </section>
+
+        <a class="programmation__link senary-border-color" href="./programmation.html">Accéder à la
+            <br>
+            <span class="quinary-color">programmation actuelle</span>
+        </a>
+    </main>
+
+    <script>
+        const actionButtons = document.querySelectorAll('.programmation__header__action-button');
+
+        actionButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                if (button.classList.contains("programmation__header__action-button--active")) {
+                    return;
+                } else {
+                    actionButtons.forEach((element) => element !== button ? element.classList.remove("programmation__header__action-button--active") : null);
+                    button.classList.add("programmation__header__action-button--active")
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

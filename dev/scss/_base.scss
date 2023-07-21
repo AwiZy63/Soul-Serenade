@@ -1,0 +1,130 @@
+@import url("https://fonts.cdnfonts.com/css/cactus-town");
+@import url("https://fonts.googleapis.com/css2?family=Inder&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Capriola&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: $secondary-font;
+    font-size: $font-size-normal;
+    color: $septenary-color;
+    background-color: $octonary-color;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+.secondary-color {
+    color: $secondary-color;
+}
+
+.tertiary-color {
+    color: $tertiary-color;
+}
+
+.quaternary-color {
+    color: $quaternary-color;
+}
+
+.quinary-color {
+    color: $quinary-color;
+}
+
+.senary-color {
+    color: $senary-color;
+}
+
+.septenary-color {
+    color: $septenary-color;
+}
+
+.octonary-color {
+    color: $octonary-color;
+}
+
+.nonary-color {
+    color: $nonary-color;
+}
+
+.denary-color {
+    color: $denary-color;
+}
+
+.undenary-color {
+    color: $undenary-color;
+}
+
+.primary-border-color {
+    border-color: $primary-color !important;
+}
+
+.secondary-border-color {
+    border-color: $secondary-color !important;
+}
+
+.tertiary-border-color {
+    border-color: $tertiary-color !important;
+}
+
+.quaternary-border-color {
+    border-color: $quaternary-color !important;
+}
+
+.quinary-border-color {
+    border-color: $quinary-color !important;
+}
+
+.senary-border-color {
+    border-color: $senary-color !important;
+}
+
+.septenary-border-color {
+    border-color: $septenary-color !important;
+}
+
+.octonary-border-color {
+    border-color: $octonary-color !important;
+}
+
+.nonary-border-color {
+    border-color: $nonary-color !important;
+}
+
+.denary-border-color {
+    border-color: $denary-color !important;
+}
+
+.undenary-border-color {
+    border-color: $undenary-color !important;
+}
+
+.main-content {
+    padding: 30px 20px;
+
+    max-width: 1200px;
+
+    @media screen and (min-width: 768px) {
+        padding: 30px 0;
+        width: 70%;
+        margin: 0 auto;
+    }
+}

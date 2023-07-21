@@ -1,0 +1,154 @@
+.instagram-embed {
+    background: $gradient-color;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+        padding: 40px 0 20px;
+    }
+    &__header {
+        &__title {
+            font-family: $primary-font;
+            color: $octonary-color;
+            font-size: $font-size-title;
+            font-weight: $font-weight-regular;
+            @media screen and (min-width: 768px) {
+                font-size: $font-size-l-title;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        &__carousel {
+            display: flex;
+            width: 100%;
+            background-color: black;
+            // animation: slideCarouselInfinite 20s linear infinite;
+            img {
+                object-fit: cover;
+                background-color: black;
+                aspect-ratio: 1/1;
+                height: 100px;
+                @media screen and (min-width: 768px) {
+                    height: 200px;
+                }
+            }
+        }
+        // &__carousel-selection {
+        //     display: flex;
+        //     gap: 6px;
+        //     &__button {
+        //         cursor: pointer;
+        //         background-color: transparent;
+        //         border: none;
+        //         i {
+        //             font-size: $font-size-small;
+        //             color: $nonary-color;
+        //             opacity: 0.5;
+        //         }
+        //         &--active {
+        //             i {
+        //                 opacity: 1;
+        //             }
+        //         }
+
+        //         transition: opacity 0.15s ease-in-out;
+
+        //         &:hover {
+        //             i {
+        //                 transition: opacity 0.15s ease-in-out;
+        //                 opacity: 0.9;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    &__footer {
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $octonary-color;
+            padding: 10px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: $septenary-color;
+            font-family: $quinary-font;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-small;
+            i {
+                font-size: $font-size-normal;
+                margin-right: 5px;
+            }
+
+            transition: background 0.15s ease-in-out;
+
+            &:hover {
+                transition: background 0.15s ease-in-out;
+                background-color: $undenary-color;
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-top: 16px;
+                i {
+                    font-size: $font-size-x-large;
+                }
+                font-size: $font-size-normal;
+                padding: 15px 30px;
+            }
+        }
+    }
+}
+
+.slick-prev.slick-arrow, .slick-next.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $octonary-color;
+    border: none;
+    cursor: pointer;
+    i {
+        font-size: $font-size-normal;
+        color: $septenary-color;
+    }
+
+    transition: background 0.15s ease-in-out;
+
+    &:hover {
+        transition: background 0.15s ease-in-out;
+        background-color: $undenary-color;
+    }
+    i {
+        font-size: $font-size-large;
+    }
+    @media screen and (min-width: 768px) {
+        width: 40px;
+        height: 40px;
+        i {
+            font-size: $font-size-x-large;
+        }
+    }
+}
+
+.slick-prev.slick-arrow {
+    left: 20px;
+}
+
+.slick-next.slick-arrow {
+    right: 20px;
+}

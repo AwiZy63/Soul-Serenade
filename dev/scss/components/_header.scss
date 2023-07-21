@@ -1,0 +1,142 @@
+.header {
+    padding: 48px 30px 30px;
+    position: relative;
+    z-index: 999;
+    background-color: $octonary-color;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &__socials {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+    &__social {
+        text-decoration: none;
+        color: $nonary-color;
+        i {
+            font-size: $font-size-large;
+        }
+
+        transition: opacity 0.15s ease-in-out;
+
+        &:hover {
+            transition: opacity 0.15s ease-in-out;
+            opacity: 0.75;
+        }
+
+        @media screen and (min-width: 1024px) {
+            i {
+                font-size: $font-size-x-large;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            i {
+                font-size: $font-size-s-title;
+            }
+        }
+    }
+
+    &__brands {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        @media screen and (min-width: 768px) {
+            gap: 8px;
+        }
+        &__title {
+            font-family: $primary-font;
+            color: $nonary-color;
+            font-size: $font-size-title;
+            font-weight: $font-weight-bold;
+            white-space: nowrap;
+            @media screen and (min-width: 768px) {
+                font-size: $font-size-l-title;
+            }
+            @media screen and (min-width: 1200px) {
+                font-size: $font-size-xl-title;
+            }
+        }
+        &__subtitle {
+            text-align: center;
+            font-family: $secondary-font;
+            color: $nonary-color;
+            font-size: $font-size-small;
+            font-weight: $font-weight-light;
+            text-transform: uppercase;
+            @media screen and (min-width: 768px) {
+                font-size: $font-size-normal;
+            }
+            @media screen and (min-width: 1200px) {
+                font-size: $font-size-x-large;
+            }
+            @media screen and (min-width: 1400px) {
+                font-size: $font-size-s-title;
+                
+            }
+        }
+    }
+
+    &__translations {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+        }
+    }
+    &__translation {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: $nonary-color;
+        font-family: $tertiary-font;
+        font-weight: $font-weight-light;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        position: relative;
+
+        @media screen and (min-width: 1024px) {
+            font-size: $font-size-large;
+        }
+
+        @media screen and (min-width: 1200px) {
+            font-size: $font-size-x-large;
+        }
+        &:nth-child(1) {
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: calc(100% + 8px);
+                transform: translateY(-50%);
+                content: "";
+                height: 24px;
+                width: 2px;
+                background-color: $nonary-color;
+                opacity: 0.25;
+            }
+        }
+
+        transition: opacity 0.15s ease-in-out;
+
+        &:hover {
+            transition: opacity 0.15s ease-in-out;
+            opacity: 0.75;
+        }
+
+        &--active {
+            text-decoration: underline;
+        }
+    }
+}

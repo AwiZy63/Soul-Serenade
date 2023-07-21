@@ -1,0 +1,25 @@
+
+@mixin random-background-color() {
+    $random: random($limit: 10);
+    @if $random == 1 {
+        background-color: $primary-color;
+    } @else if $random == 2 {
+        background-color: $secondary-color;
+    } @else if $random == 3 {
+        background-color: $tertiary-color;
+    } @else if $random == 4 {
+        background-color: $quaternary-color;
+    } @else if $random == 5 {
+        background-color: $quinary-color;
+    } @else if $random == 6 {
+        background-color: $senary-color;
+    } @else if $random == 7 {
+        background-color: $septenary-color;
+    } @else if $random == 8 {
+        background-color: $octonary-color;
+    } @else if $random == 9 {
+        background-color: $nonary-color;
+    } @else if $random == 10 {
+        background-color: $denary-color;
+    }
+}

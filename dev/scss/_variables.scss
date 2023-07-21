@@ -1,0 +1,48 @@
+
+/* VARIABLES */
+
+$primary-color: #FF3366;
+$secondary-color: #39A0ED;
+$tertiary-color: #072AC8;
+$quaternary-color: #B91372;
+$quinary-color: #EC4E20;
+$senary-color: #F9DC5C;
+$septenary-color: #000000;
+$octonary-color: #FFFFFF;
+$nonary-color: #302B27;
+$denary-color: #f36;
+$undenary-color: #cccccc;
+$form-bg-color: #EEEEEE;
+$disabled-color: #E1E1E1;
+
+$gradient-color: linear-gradient(45deg, $quaternary-color 0%, $denary-color 100%);
+
+$primary-font: 'Cactus-Town', cursive;
+$secondary-font: 'Inder', sans-serif;
+$tertiary-font: 'Roboto', sans-serif;
+$quaternary-font: 'Capriola', sans-serif;
+$quinary-font: 'Inter', sans-serif;
+
+$font-size-x-small: 0.625rem; /* 10px */
+$font-size-m-small: 0.75rem; /* 12px */
+$font-size-small: 0.875rem; /* 14px */
+$font-size-normal: 1rem; /* 16px */
+$font-size-large: 1.125rem; /* 18px */
+$font-size-x-large: 1.25rem; /* 20px */
+
+$font-size-s-title: 1.75rem; /* 28px */
+$font-size-title: 2.35rem; /* 38px */
+$font-size-l-title: 2.625rem; /* 42px */
+$font-size-xl-title: 3.998rem; /* 64px */
+
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+/* END VARIABLES */

@@ -1,0 +1,112 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    &-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+    &-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        label {
+            font-family: $tertiary-font;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-normal;
+            
+            @media screen and (min-width: 768px) {
+                font-size: $font-size-large;
+            }
+        }
+        input, textarea, select {
+            padding: 8px 10px;
+            border: 1px solid $nonary-color;
+            font-family: $tertiary-font;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-small;
+            transition: all 0.05s ease-in-out;
+            outline: none;
+            background-color: $form-bg-color;
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                font-size: $font-size-normal;
+            }
+
+            &::placeholder {
+                color: $septenary-color;
+                opacity: 0.25;
+                font-style: italic;
+            }
+            &:focus {
+                background-color: $octonary-color;
+            }
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+            max-height: 300px;
+            @media screen and (min-width: 768px) {
+                min-height: 200px;
+                max-height: 400px;
+            }
+        }
+    }
+    button[type="submit"] {
+        background: $gradient-color;
+        color: $octonary-color;
+        font-family: $tertiary-font;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-x-large;
+        text-transform: uppercase;
+        padding: 4px;
+        height: fit-content;
+        border: none;
+        cursor: pointer;
+        transition: all 0.05s ease-in-out;
+        filter: brightness(1);
+        &:hover {
+            transition: all 0.05s ease-in-out;
+            filter: brightness(1.2);
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: $font-size-x-large;
+            padding: 12px 16px;
+            width: fit-content;
+        }
+    }
+}
+
+#bookingSubmitButton {
+    background: $gradient-color;
+    color: $octonary-color;
+    font-family: $tertiary-font;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-x-large;
+    text-transform: uppercase;
+    padding: 4px;
+    height: fit-content;
+    border: none;
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
+    filter: brightness(1);
+    &:hover {
+        transition: all 0.05s ease-in-out;
+        filter: brightness(1.2);
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: $font-size-x-large;
+        height: 100%;
+        width: 100%;
+    }
+}

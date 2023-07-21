@@ -1,0 +1,133 @@
+.main {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        padding: 30px 0;
+        width: 70%;
+    }
+
+    // @media screen and (min-width: 1128px) {
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+    // }
+
+    @media screen and (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    &__welcome-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: $secondary-color;
+        padding: 10px;
+
+        @media screen and (min-width: 660px) {
+            flex-direction: row;
+        }
+
+        &__image {
+            flex: 1;
+            width: 100%;
+            aspect-ratio: 1/1;
+            max-height: 360px;
+            object-fit: cover;
+            object-position: center;
+        }
+        &__article {
+            flex: 1;
+            background-color: $octonary-color;
+            padding: 12px 10px;
+            p {
+                font-family: $quinary-font;
+                font-weight: $font-weight-regular;
+                font-size: $font-size-small;
+
+                @media screen and (min-width: 660px) {
+                    font-size: $font-size-normal;
+                }
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: $quinary-font;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-x-large;
+        padding: 10px 20px;
+        border: 10px solid black;
+        text-decoration: none;
+        color: $nonary-color;
+        position: relative;
+
+        @media screen and (min-width: 1024px) {
+            font-size: $font-size-s-title;
+        }
+
+        &::after {
+            content: "->";
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            color: $nonary-color;
+            font-size: $font-size-s-title;
+            transform: translateY(-50%);
+        }
+        &:hover {
+            &::after {
+                animation: bounce 0.75s linear infinite;
+            }
+        }
+
+        &:nth-child(1) {
+            @media screen and (min-width: 1024px) {
+                width: 80%;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+/* Bouncing arrows */
+@keyframes bounce {
+    0% {
+        transform: translate(0, -50%);
+    }
+    25% {
+        transform: translate(25%, -50%);
+    }
+    50% {
+        transform: translate(0, -50%);
+    }
+    75% {
+        transform: translate(-25%, -50%);
+    }
+    100% {
+        transform: translate(0, -50%);
+    }
+}

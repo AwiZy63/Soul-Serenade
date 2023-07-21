@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+/* COMPONENTS */
+
+@import 'components/header';
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/instagram-embed';
+@import 'components/form';
+
+/* PAGES */
+
+@import 'pages/home';
+@import 'pages/programmation';
+@import 'pages/reservations';
+@import 'pages/contact';
